@@ -31,7 +31,6 @@ A Python program running on a second PC captures mouse actions and forwards them
 - **constants.py**: Defines various constants used throughout the program.
 - **devices.py**: Manages device registration and raw input handling.
 - **SoftwareMouse.py**: Implements the SoftwareMouse class for mouse actions.
-- **softwareMouseAccessTest.py**: Script to test and start the mouse forwarding functionality.
 - **structures.py**: Defines various data structures used for raw input and device information.
 
 ## 📜 Code Snippets
@@ -143,20 +142,4 @@ uint8_t GetData() {
     }
     return 0;
 }
-```
-
-### `softwareMouseAccessTest.py`
-```python
-from SoftwareMouse import SoftwareMouse
-import time
-
-def test():
-    while True:
-        time.sleep(1)
-        mouse = SoftwareMouse(0, 0)
-        mouse.MoveTo(100, 100)
-        #mouse.Click(100, 100, 'left')
-        #mouse.Release(100, 100, 'left')
-
-test()
 ```
